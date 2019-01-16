@@ -1,0 +1,57 @@
+data-module: experiment.qa.data.insuranceqa.tsv
+model-module: experiment.qa_pairwise.model.compare_aggregate
+training-module: experiment.qa_pairwise.train.training
+evaluation-module: experiment.qa_pairwise.evaluation.evaluation
+
+logger:
+  level: DEBUG
+  path: logs/low-resource/apple/compagg.100.txt
+
+global:
+  question_length: 50
+  answer_length: 400
+  embedding_size: 300
+
+data:
+  lowercased: false
+  map_oov: true
+  map_numbers: false
+  embeddings_path: data/glove.840B.300d.txt
+
+  train_data:
+    - data/stackexchange-answerselection/apple.stackexchange.com
+
+  max_train_samples: 100
+
+
+model:
+  filters: 160
+  normalization: true
+  preprocess_hidden_size: 260
+  window_sizes:
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+  trainable_embeddings: false
+
+training:
+  n_train_answers: 50
+  save_folder: checkpoints/low-resource-apple-compagg.100
+  remove_save_folder_on_start: true
+  epochs: 100
+  early_stopping_patience: 10
+  dropout: 0.5
+
+  optimizer: adam
+  initial_learning_rate: 0.0011
+  dynamic_learning_rate: false
+
+
+
+  batchsize: 2
+  batchsize_valid: 500
+
+evaluation:
+  skip: false

@@ -1,0 +1,46 @@
+data-module: experiment.qa.data.insuranceqa.tsv
+model-module: experiment.qa_pairwise.model.coala
+training-module: experiment.qa_pairwise.train.training
+evaluation-module: experiment.qa_pairwise.evaluation.evaluation
+
+logger:
+  level: DEBUG
+  path: logs/wikipassageqa_coala.txt
+
+global: 
+  question_length: 36
+  answer_length: 400      # we trained with max length 400 and evaluated with max length 1000
+  embedding_size: 300
+
+data:
+  lowercased: false
+  map_oov: true
+  map_numbers: false
+  embeddings_path: data/glove.840B.300d.txt
+
+  train_data:
+    - data/WikiPassageQA/tsv
+
+model:
+  filters: 250
+  window_size: 2
+  trainable_embeddings: false
+  n_p_values: 22
+  normalize_transformation: true
+
+training:
+  n_train_answers: 50
+  save_folder: checkpoints/wikipassageqa_aspects
+  epochs: 100
+  early_stopping_patience: 10
+  dropout: 0.1
+
+  optimizer: adam
+  initial_learning_rate: 0.0001
+  dynamic_learning_rate: false
+
+  batchsize: 45
+
+evaluation:
+  primary_measure: mrr
+  skip: false
