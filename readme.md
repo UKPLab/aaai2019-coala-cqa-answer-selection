@@ -1,7 +1,8 @@
 # COALA: A Neural Coverage-Based Approach for Long Answer Selection with Small Data
 
 This repository contains the data and code to reproduce the results of our paper: 
-https://public.ukp.informatik.tu-darmstadt.de/aaai19-coala-cqa-answer-selection/2019_AAAI_COALA_Camready.pdf 
+https://aaai.org/ojs/index.php/AAAI/article/view/4671/4549 (alternative URL:
+https://public.ukp.informatik.tu-darmstadt.de/aaai19-coala-cqa-answer-selection/2019_AAAI_COALA_Camready.pdf)
 
 Please use the following citation:
 
@@ -11,12 +12,12 @@ Please use the following citation:
   author = {R{\"u}ckl{\'e}, Andreas and Moosavi, Nafise Sadat and Gurevych, Iryna},
   publisher = {Association for Computational Linguistics},
   booktitle = {Proceedings of the 33rd AAAI Conference on Artificial Intelligence (AAAI 2019)},
-  pages = {to appear},
+  pages = {6932--6939},
   month = jan,
   year = {2019},
   location = {Honolulu, Hawaii, USA},
-  doi = "",
-  url = ""
+  doi = "10.1609/aaai.v33i01.33016932",
+  url = "https://aaai.org/ojs/index.php/AAAI/article/view/4671/4549"
 }
 ```
 
