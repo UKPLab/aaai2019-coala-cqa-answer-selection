@@ -7,10 +7,10 @@ https://public.ukp.informatik.tu-darmstadt.de/aaai19-coala-cqa-answer-selection/
 Please use the following citation:
 
 ```
-@article{rueckle:AAAI:2019,
+@inproceedings{rueckle:AAAI:2019,
   title = {COALA: A Neural Coverage-Based Approach for Long Answer Selection with Small Data.},
   author = {R{\"u}ckl{\'e}, Andreas and Moosavi, Nafise Sadat and Gurevych, Iryna},
-  publisher = {Association for Computational Linguistics},
+  publisher = {Association for the Advancement of Artificial Intelligence},
   booktitle = {Proceedings of the 33rd AAAI Conference on Artificial Intelligence (AAAI 2019)},
   pages = {6932--6939},
   month = jan,
