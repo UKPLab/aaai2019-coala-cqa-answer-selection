@@ -7,7 +7,7 @@ Please use the following citation:
 
 ```
 @article{rueckle:AAAI:2019,
-  title = {COALA: A Neural Coverage-Based Approach for Long Answer Selection with Small Data.},
+  title = {{COALA}: A Neural Coverage-Based Approach for Long Answer Selection with Small Data.},
   author = {R{\"u}ckl{\'e}, Andreas and Moosavi, Nafise Sadat and Gurevych, Iryna},
   publisher = {Association for Computational Linguistics},
   booktitle = {Proceedings of the 33rd AAAI Conference on Artificial Intelligence (AAAI 2019)},
@@ -65,3 +65,8 @@ More details on the framework that we used in COALA can be found in our other re
 
 We used Python 2.7.14 for our experiments. The output of ```pip --freeze``` is given in pipfreeze.txt (not all of the
 packages are strictly required). 
+
+
+## Running Sentence Embedding Baselines
+
+This requires creating a new config file. Use the ```qa.train.no_training``` trainer module and the  ```qa.evaluation.evaluation_embeddings_server_sents``` evaluation module. [PMeans](https://arxiv.org/abs/1803.01400) embeddings can be evaluated with their [embedding server](https://github.com/UKPLab/arxiv2018-xling-sentence-embeddings/tree/master/model). The [embedding_types](https://github.com/UKPLab/aaai2019-coala-cqa-answer-selection/blob/master/experiment/qa/evaluation/evaluation_embeddings_server_sents.py#L54) need to be set accordingly.
