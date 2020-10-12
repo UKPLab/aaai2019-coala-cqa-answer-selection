@@ -29,7 +29,7 @@ model:
 
 training:
   n_train_answers: 50
-  save_folder: checkpoints/se_travel_hinge_cnn
+  save_folder: checkpoints/se_travel_cnn
   remove_save_folder_on_start: true
   epochs: 50
   early_stopping_patience: 10

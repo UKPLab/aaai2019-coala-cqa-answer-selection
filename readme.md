@@ -1,22 +1,23 @@
 # COALA: A Neural Coverage-Based Approach for Long Answer Selection with Small Data
 
 This repository contains the data and code to reproduce the results of our paper: 
-https://public.ukp.informatik.tu-darmstadt.de/aaai19-coala-cqa-answer-selection/2019_AAAI_COALA_Camready.pdf 
+https://aaai.org/ojs/index.php/AAAI/article/view/4671/4549 (alternative URL:
+https://public.ukp.informatik.tu-darmstadt.de/aaai19-coala-cqa-answer-selection/2019_AAAI_COALA_Camready.pdf)
 
 Please use the following citation:
 
 ```
-@article{rueckle:AAAI:2019,
+@inproceedings{rueckle:AAAI:2019,
   title = {{COALA}: A Neural Coverage-Based Approach for Long Answer Selection with Small Data.},
   author = {R{\"u}ckl{\'e}, Andreas and Moosavi, Nafise Sadat and Gurevych, Iryna},
-  publisher = {Association for Computational Linguistics},
+  publisher = {Association for the Advancement of Artificial Intelligence},
   booktitle = {Proceedings of the 33rd AAAI Conference on Artificial Intelligence (AAAI 2019)},
-  pages = {to appear},
+  pages = {6932--6939},
   month = jan,
   year = {2019},
   location = {Honolulu, Hawaii, USA},
-  doi = "",
-  url = ""
+  doi = "10.1609/aaai.v33i01.33016932",
+  url = "https://aaai.org/ojs/index.php/AAAI/article/view/4671/4549"
 }
 ```
 
@@ -70,3 +71,4 @@ packages are strictly required).
 ## Running Sentence Embedding Baselines
 
 This requires creating a new config file. Use the ```qa.train.no_training``` trainer module and the  ```qa.evaluation.evaluation_embeddings_server_sents``` evaluation module. [PMeans](https://arxiv.org/abs/1803.01400) embeddings can be evaluated with their [embedding server](https://github.com/UKPLab/arxiv2018-xling-sentence-embeddings/tree/master/model). The [embedding_types](https://github.com/UKPLab/aaai2019-coala-cqa-answer-selection/blob/master/experiment/qa/evaluation/evaluation_embeddings_server_sents.py#L54) need to be set accordingly.
+
